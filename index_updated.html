@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Support Crypto Education</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #0d1117;
+      color: #c9d1d9;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+    }
+    h1 {
+      font-size: 2.5rem;
+      color: #58a6ff;
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+    .subtitle {
+      font-size: 1.2rem;
+      color: #8b949e;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    .container {
+      max-width: 800px;
+      text-align: center;
+    }
+    .wallet {
+      margin-top: 2rem;
+      background-color: #161b22;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(88, 166, 255, 0.2);
+    }
+    .wallet code {
+      display: block;
+      margin-top: 1rem;
+      word-break: break-all;
+      font-size: 1rem;
+      color: #58a6ff;
+    }
+    button {
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #238636;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #2ea043;
+    }
+    img.qr {
+      margin-top: 1rem;
+      width: 140px;
+    }
+    .donation-count {
+      margin-top: 1rem;
+      font-weight: bold;
+      color: #3fb950;
+    }
+    .scam-images {
+      margin-top: 3rem;
+    }
+    .scam-images img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin: 1rem 0;
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Support Crypto Education</h1>
+    <div class="subtitle">
+      Help fight scams and misinformation by supporting clear, trusted education in the crypto world.
+    </div>
+    <p>
+      I'm creating free content to help beginners and enthusiasts safely enter the world of Web3.  
+      Your donation helps fund educational tools, tutorials, and awareness campaigns against fraud.
+    </p>
+
+    <div class="wallet">
+      <h2>Donate in SOL</h2>
+      <img src="solana_qr.png" class="qr" alt="Solana QR Code"/>
+      <code id="wallet-address">2s7stSwekf14TH2gaE8cKRLFNNnHQpCL3eR5TnJ6SvUW</code>
+      <button onclick="copyAddress()">Copy Wallet Address</button>
+      <div class="donation-count">🎉 47 donations received so far</div>
+    </div>
+
+    <div class="scam-images">
+      <h2>Protecting People from Crypto Scams</h2>
+      <img src="https://tse3.mm.bing.net/th?id=OIP.dG8xG9O4qYn8iPS5KdLoggHaDF&cb=iwc1&pid=Api" alt="Scam Education">
+      <img src="https://tse4.mm.bing.net/th?id=OIP.4NVZsIg3zUbx48BEHeSToQHaEO&pid=Api" alt="Crypto Fraud Prevention">
+      <img src="https://tse1.mm.bing.net/th?id=OIP.udImGLcgLfNMxqd63NpKRwHaDl&cb=iwp1&pid=Api" alt="Phishing Awareness">
+      <img src="https://tse4.mm.bing.net/th?id=OIP.QDn8Cc9tERcAe4JHW9pbpgHaGn&cb=iwc1&pid=Api" alt="Scam Categories">
+    </div>
+  </div>
+
+  <script>
+    function copyAddress() {
+      const address = document.getElementById('wallet-address').innerText;
+      navigator.clipboard.writeText(address).then(() => {
+        alert("Wallet address copied!");
+      });
+    }
+  </script>
+</body>
+</html>
